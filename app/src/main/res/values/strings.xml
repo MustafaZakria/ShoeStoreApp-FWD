@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ShoeStore</string>
     <string name="hello_blank_fragment">Hello</string>
+    <string name="email_hint">Enter email</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
 </resources>

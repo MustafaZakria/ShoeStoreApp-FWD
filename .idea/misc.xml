@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android/Egypt FWD/ShoeStoreApp - FWD/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Android/Egypt FWD/ShoeStoreApp - FWD/app/src/main/res/drawable/ic_email_24.xml" value="0.1465" />
+        <entry key="..\:/Android/Egypt FWD/ShoeStoreApp - FWD/app/src/main/res/drawable/ic_logout.xml" value="0.1465" />
+        <entry key="..\:/Android/Egypt FWD/ShoeStoreApp - FWD/app/src/main/res/drawable/shape_button.xml" value="0.1465" />
+        <entry key="..\:/Android/Egypt FWD/ShoeStoreApp - FWD/app/src/main/res/drawable/shape_button_white.xml" value="0.1465" />
+        <entry key="..\:/Android/Egypt FWD/ShoeStoreApp - FWD/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Android/Egypt FWD/ShoeStoreApp - FWD/app/src/main/res/layout/fragment_add_shoe.xml" value="0.12158054711246201" />
         <entry key="..\:/Android/Egypt FWD/ShoeStoreApp - FWD/app/src/main/res/layout/fragment_instructions.xml" value="0.10989583333333333" />
+        <entry key="..\:/Android/Egypt FWD/ShoeStoreApp - FWD/app/src/main/res/layout/fragment_login.xml" value="0.176" />
       </map>
     </option>
   </component>

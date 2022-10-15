@@ -5,4 +5,11 @@
     <string name="password_hint">Enter Password</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="welcome_text">Here you can create your own shoe store with your shoes. Here you can create your own shoe store with your shoes.</string>
+    <string name="welcome_header">Welcome \nto our store!</string>
+    <string name="page_1_of_2">Page 1 of 2</string>
+    <string name="skip">skip</string>
+    <string name="next">next</string>
+    <string name="page_2_of_2">Page 2 of 2</string>
+    <string name="get_started">Get started</string>
 </resources>

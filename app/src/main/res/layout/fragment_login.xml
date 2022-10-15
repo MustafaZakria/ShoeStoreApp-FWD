@@ -9,7 +9,7 @@
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+            android:id="@+id/constraint_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:context=".ui.fragments.LoginFragment"
@@ -34,29 +34,29 @@
 
 
                 <ImageView
-                    android:id="@+id/appIcon"
+                    android:id="@+id/app_icon"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:src="@drawable/ic_app_icon"
-                    app:layout_constraintLeft_toLeftOf="@id/constraintLayout"
-                    app:layout_constraintRight_toRightOf="@id/constraintLayout"
-                    app:layout_constraintBottom_toTopOf="@id/layoutUsername"
+                    app:layout_constraintLeft_toLeftOf="@id/constraint_layout"
+                    app:layout_constraintRight_toRightOf="@id/constraint_layout"
+                    app:layout_constraintBottom_toTopOf="@id/layout_username"
                     android:contentDescription="@string/app_name">
 
                 </ImageView>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layoutUsername"
+                android:id="@+id/layout_username"
                 android:layout_marginTop="15dp"
                 app:startIconDrawable="@drawable/ic_email"
                 app:startIconTint="@color/black"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/appIcon">
+                app:layout_constraintTop_toBottomOf="@id/app_icon">
 
                 <EditText
-                    android:id="@+id/etEmail"
+                    android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email_hint"
@@ -65,17 +65,17 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layoutPass"
+                android:id="@+id/layout_pass"
                 app:startIconDrawable="@drawable/ic_lock"
                 app:startIconTint="@color/black"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/layoutUsername"
+                app:layout_constraintTop_toBottomOf="@id/layout_username"
                 android:layout_marginTop="5dp">
 
                 <EditText
-                    android:id="@+id/etPassword"
+                    android:id="@+id/et_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password_hint"
@@ -84,7 +84,7 @@
 
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnLogin"
+                android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
@@ -92,14 +92,14 @@
                 android:background="@drawable/shape_button_black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutPass"
+                app:layout_constraintTop_toBottomOf="@+id/layout_pass"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textColor="@color/white" />
 
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnRegister"
+                android:id="@+id/btn_register"
                 android:background="@drawable/shape_button_white"
                 android:textAllCaps="false"
                 android:layout_width="match_parent"
@@ -108,7 +108,7 @@
                 android:text="@string/register"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+                app:layout_constraintTop_toBottomOf="@+id/btn_login"
                 android:textSize="18sp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

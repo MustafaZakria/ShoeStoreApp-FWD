@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
             .addOnDestinationChangedListener{ _, dest, _ ->
                 when(dest.id) {
                     R.id.loginFragment, R.id.welcomeFragment, R.id.instructionsFragment ->
-                        binding.appBarLayout.visibility = View.GONE
-                    else -> binding.appBarLayout.visibility = View.VISIBLE
+                        binding.layoutAppBar.visibility = View.GONE
+                    else -> binding.layoutAppBar.visibility = View.VISIBLE
                 }
             }
 

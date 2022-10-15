@@ -22,9 +22,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        val navHostFragment = findViewById<View>(R.id.navHostFragment)
-
-        navHostFragment.findNavController()
+        this.findNavController(R.id.navHostFragment)
             .addOnDestinationChangedListener{ _, dest, _ ->
                 when(dest.id) {
                     R.id.loginFragment, R.id.welcomeFragment, R.id.instructionsFragment ->

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">ShoeStore</string>
     <string name="hello_blank_fragment">Hello</string>
-    <string name="email_hint">Enter email</string>
-    <string name="password_hint">Enter Password</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="welcome_text">Here you can create your own shoe store with your shoes. Here you can create your own shoe store with your shoes.</string>
@@ -12,4 +12,6 @@
     <string name="next">next</string>
     <string name="page_2_of_2">Page 2 of 2</string>
     <string name="get_started">Get started</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget password?</string>
 </resources>

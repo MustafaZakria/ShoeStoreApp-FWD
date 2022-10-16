@@ -20,7 +20,7 @@ class WelcomeFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
 
         binding.fab.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_welcomeFragment_to_instructionsFragment)
+            Navigation.createNavigateOnClickListener(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
         )
 
         return binding.root

@@ -25,7 +25,7 @@ class ShoeListFragment : Fragment() {
         setHasOptionsMenu(true)
 
         binding.fab.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_shoeListFragment_to_addShoeFragment)
+            Navigation.createNavigateOnClickListener(ShoeListFragmentDirections.actionShoeListFragmentToAddShoeFragment())
         )
         return binding.root
     }

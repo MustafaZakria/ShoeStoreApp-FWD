@@ -21,10 +21,10 @@ class LoginFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
         binding.btnLogin.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment)
+            Navigation.createNavigateOnClickListener(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         )
         binding.btnRegister.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment)
+            Navigation.createNavigateOnClickListener(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         )
 
         return binding.root

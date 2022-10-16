@@ -14,4 +14,9 @@
     <string name="get_started">Get started</string>
     <string name="remember_me">Remember me</string>
     <string name="forget_password">Forget password?</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>

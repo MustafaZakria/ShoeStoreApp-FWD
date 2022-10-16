@@ -22,7 +22,7 @@ class InstructionsFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions, container, false)
 
         binding.btnGetStarted.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_instructionsFragment_to_shoeListFragment)
+            Navigation.createNavigateOnClickListener(InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment())
         )
 
         return binding.root

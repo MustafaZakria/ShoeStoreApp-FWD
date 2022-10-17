@@ -49,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
-                android:text="E-mail"
+                android:text="@string/e_mail"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/layout_email"
                 app:layout_constraintStart_toStartOf="@+id/layout_email" />
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
-                android:text="Password"
+                android:text="@string/password"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/layout_pass"
                 app:layout_constraintStart_toStartOf="@+id/layout_pass" />
@@ -113,7 +113,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:text="@string/login"
                 android:background="@drawable/shape_button_black"

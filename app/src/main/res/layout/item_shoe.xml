@@ -1,88 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/cardView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="0dp"
-    app:cardCornerRadius="0dp"
-    app:cardBackgroundColor="#B7FFFFFF"
-    app:cardElevation="1dp"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/relativeLayout"
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingTop="8dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="8dp">
+        android:layout_margin="0dp"
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="@color/md_blue_50"
+        app:cardElevation="1dp"
+        >
 
-        <ImageView
-            android:id="@+id/iv_shoe"
-            android:layout_width="175dp"
-            android:layout_height="195dp"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tv_shoe_desc"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/product" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_shoe_name"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
-            android:text="ULTRABOOST 22 SHOES"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@id/tv_shoe_desc"
-            app:layout_constraintStart_toEndOf="@id/iv_shoe"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_shoe_company"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:paddingTop="5dp"
-            android:text="ADIDAS"
-            android:textSize="13sp"
-            app:layout_constraintEnd_toEndOf="@id/tv_shoe_desc"
-            app:layout_constraintStart_toEndOf="@id/iv_shoe"
-            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_name" />
+            <ImageView
+                android:id="@+id/iv_shoe"
+                android:layout_width="175dp"
+                android:layout_height="195dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_shoe_desc"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/product" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_shoe_desc"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/roboto"
-            android:paddingTop="5dp"
-            android:text="Nothing lasts longer than workwear. Especially when you patch up the holes and keep moving. These Ultraboost running shoes take style cues from denim workwear."
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/iv_shoe"
-            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_company" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_shoe_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@={shoe.name}"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_shoe_desc"
+                app:layout_constraintStart_toEndOf="@id/iv_shoe"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_cart_size"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:paddingTop="5dp"
-            android:text="45"
-            android:textSize="13sp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_shoe_desc"
-            app:layout_constraintStart_toEndOf="@id/iv_shoe"
-            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_desc" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_shoe_company"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:paddingTop="5dp"
+                android:text="@={shoe.company}"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_shoe_desc"
+                app:layout_constraintStart_toEndOf="@id/iv_shoe"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shoe_name" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_shoe_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/roboto"
+                android:paddingTop="5dp"
+                android:text="@={shoe.description}"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/iv_shoe"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shoe_company" />
 
-</androidx.cardview.widget.CardView>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_cart_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:paddingTop="5dp"
+                android:text="@={`` + shoe.size}"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_shoe_desc"
+                app:layout_constraintStart_toEndOf="@id/iv_shoe"
+                app:layout_constraintTop_toBottomOf="@+id/tv_shoe_desc" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

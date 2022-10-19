@@ -33,7 +33,7 @@
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/seaweed_script"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/yellow"/>
 
 <!--                <com.google.android.material.imageview.ShapeableImageView-->
 <!--                    android:id="@+id/iv_log_out"-->

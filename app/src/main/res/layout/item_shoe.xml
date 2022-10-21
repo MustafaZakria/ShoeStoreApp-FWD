@@ -48,11 +48,13 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
                 android:text="@={shoe.name}"
+                android:textColor="@color/md_blue_900"
                 android:textSize="15sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@id/tv_shoe_desc"
                 app:layout_constraintStart_toEndOf="@id/iv_shoe"
                 app:layout_constraintTop_toTopOf="parent"
-                android:textColor="@color/md_blue_900"/>
+                tools:text="SUPERSTAR VEGAN SHOES good" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_shoe_company"
@@ -65,7 +67,8 @@
                 app:layout_constraintEnd_toEndOf="@id/tv_shoe_desc"
                 app:layout_constraintStart_toEndOf="@id/iv_shoe"
                 app:layout_constraintTop_toBottomOf="@+id/tv_shoe_name"
-                android:textColor="@color/md_blue_900"/>
+                android:textColor="@color/md_blue_900"
+                tools:text="ADIDAS"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_shoe_desc"
@@ -80,7 +83,8 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/iv_shoe"
                 app:layout_constraintTop_toBottomOf="@+id/tv_shoe_company"
-                android:textColor="@color/md_blue_900"/>
+                android:textColor="@color/md_blue_900"
+                tools:text="Since the '70s, adidas Superstar shoes have played a major role in the shaping of our culture. These shoes are vegan and entirely eliminate the use of animal products."/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_cart_size"
@@ -93,7 +97,8 @@
                 app:layout_constraintEnd_toEndOf="@+id/tv_shoe_desc"
                 app:layout_constraintStart_toEndOf="@id/iv_shoe"
                 app:layout_constraintTop_toBottomOf="@+id/tv_shoe_desc"
-                android:textColor="@color/md_blue_900"/>
+                android:textColor="@color/md_blue_900"
+                tools:text="34"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

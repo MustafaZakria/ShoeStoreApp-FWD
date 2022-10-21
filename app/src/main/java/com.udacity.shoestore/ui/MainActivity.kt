@@ -9,8 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
@@ -31,7 +33,5 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-
-        Timber.plant(Timber.DebugTree())
     }
 }

@@ -2,10 +2,9 @@ package com.udacity.shoestore.ui.fragments
 
 import android.os.Bundle
 import android.view.*
-import androidx.fragment.app.Fragment
+import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.Observable
-import androidx.databinding.ObservableField
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
@@ -13,17 +12,18 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
-import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.databinding.ItemShoeBinding
 import com.udacity.shoestore.viewmodels.ShoeViewModel
 
 
 class ShoeListFragment : Fragment() {
 
     lateinit var binding: FragmentShoeListBinding
+    lateinit var itemBinding: ItemShoeBinding
 
     val viewModel by activityViewModels<ShoeViewModel>()
 
-    lateinit var curShoe: ObservableField<Shoe>
+    //lateinit var curShoe: shoe
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +31,8 @@ class ShoeListFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
+
+
 
         setHasOptionsMenu(true)
 
@@ -41,10 +43,16 @@ class ShoeListFragment : Fragment() {
         viewModel.listOfShoes.observe(viewLifecycleOwner, Observer { listOfShoes ->
             if(listOfShoes != null && listOfShoes.isNotEmpty()) {
                 for(shoe in listOfShoes) {
-                    //curShoe = shoe
-                }
-                (binding.layoutRoot as? ViewGroup)?.let { viewGroup ->
-                    View.inflate(context, R.layout.item_shoe, viewGroup)
+                    itemBinding = ItemShoeBinding.inflate(layoutInflater)
+                    itemBinding.shoe = shoe
+
+                    val layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    )
+                    layoutParams.setMargins(0, 0, 0, 5)
+
+                    binding.layoutRoot.addView(itemBinding.cardView, layoutParams)
                 }
             }
         })
@@ -62,7 +70,4 @@ class ShoeListFragment : Fragment() {
                 || super.onOptionsItemSelected(item)
     }
 
-    private fun setClickListeners() {
-
-    }
 }

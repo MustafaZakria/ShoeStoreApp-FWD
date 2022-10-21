@@ -1,5 +1,6 @@
 package com.udacity.shoestore.models
 
+import android.net.Uri
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
@@ -8,4 +9,4 @@ import kotlinx.android.parcel.Parcelize
 //                val images: List<String> = mutableListOf()) : Parcelable
 
 data class Shoe(var name: String, var size: Double, var company: String, var description: String,
-                val image: String)
+                val image: Uri)

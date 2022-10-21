@@ -7,6 +7,7 @@
     <string name="register">Register</string>
     <string name="welcome_text">Here you can create your own shoe store with your shoes. Here you can create your own shoe store with your shoes.</string>
     <string name="welcome_header">Welcome \nto our store!</string>
+    <string name="instructions_header">Instructions</string>
     <string name="page_1_of_2">Page 1 of 2</string>
     <string name="skip">skip</string>
     <string name="next">next</string>

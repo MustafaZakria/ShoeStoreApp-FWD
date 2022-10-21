@@ -70,23 +70,28 @@ class ShoeDetailFragment : Fragment() {
         startActivityForResult(gallery, PICK_IMAGE)
     }
 
+    lateinit var imageUri: Uri
+
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
-            val imageUri = data?.data
+            imageUri = data?.data!!
             binding.ivShoe.setImageURI(imageUri)
         }
     }
 
     private fun addShoe() {
-        val image = binding.ivShoe.toString()
-        val name = binding.etName.text.toString()
-        val company = binding.etCompany.text.toString()
-        val desc = binding.etDesc.text.toString()
-        val size = binding.autoTvSize.text as Double
+        binding.apply {
+            val image = imageUri
+            val name = etName.text.toString()
+            val company = etCompany.text.toString()
+            val desc = etDesc.text.toString()
+            val size = autoTvSize.text.toString().toDouble()
 
-        val shoe = Shoe(name, size, company, desc, image)
-        viewModel.addShoe(shoe)
+            val shoe = Shoe(name, size, company, desc, image)
+            viewModel.addShoe(shoe)
+        }
     }
 
 

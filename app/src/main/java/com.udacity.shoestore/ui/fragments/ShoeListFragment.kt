@@ -1,5 +1,6 @@
 package com.udacity.shoestore.ui.fragments
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
@@ -9,15 +10,22 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ItemShoeBinding
 import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.other.Constants
 import com.udacity.shoestore.viewmodels.ShoeViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class ShoeListFragment : Fragment() {
+
+    @Inject
+    lateinit var sharedPref: SharedPreferences
 
     lateinit var binding: FragmentShoeListBinding
 
@@ -65,8 +73,16 @@ class ShoeListFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
+        writeToSharedPref()
+        this.findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
+        return super.onOptionsItemSelected(item)
+
+    }
+
+    private fun writeToSharedPref() {
+        sharedPref.edit()
+            .putBoolean(Constants.KEY_LOGGED_IN_STATE, false)
+            .apply()
     }
 
 }

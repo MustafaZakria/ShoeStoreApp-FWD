@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import com.udacity.shoestore.other.Constants.KEY_FIRST_TIME_OPEN
+import com.udacity.shoestore.other.Constants.KEY_LOGGED_IN_STATE
 import com.udacity.shoestore.other.Constants.SHARED_PREFERENCES_NAME
 import dagger.Module
 import dagger.Provides
@@ -26,4 +27,9 @@ object AppModule {
     @Provides
     fun provideFirstTimeOPEN(sharedPreferences: SharedPreferences) =
         sharedPreferences.getBoolean(KEY_FIRST_TIME_OPEN, true)
+
+//    @Singleton
+//    @Provides
+//    fun provideLoggedInState(sharedPreferences: SharedPreferences) =
+//        sharedPreferences.getBoolean(KEY_LOGGED_IN_STATE, false)
 }

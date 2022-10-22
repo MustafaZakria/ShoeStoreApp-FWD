@@ -5,4 +5,6 @@ object Constants {
 
     const val SHARED_PREFERENCES_NAME = "sharedPref"
     const val KEY_FIRST_TIME_OPEN = "KEY_FIRST_TIME_OPEN"
+    const val KEY_LOGGED_IN_STATE = "KEY_LOGGED_IN_STATE"
+
 }

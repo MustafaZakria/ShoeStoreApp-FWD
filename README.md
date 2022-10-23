@@ -8,13 +8,16 @@ This project will consist of five screens. You don't have to create a shoe store
 4. Shoe Listing screen
 5. Shoe Detail screen for adding a new shoe
 
+## Screens
+<img src="Screens/screen1.png" alt="Alt text" title="Optional title" style="display: inline-block; margin: 0 auto; max-width: 300px">
+
 ## Getting Started
 
 Open the starter project in the latest stable version of Android Studio.
 
 Open the starter project in Android Studio
 
-##Steps
+## Steps
 
 1. Open the starter project in Android Studio
 

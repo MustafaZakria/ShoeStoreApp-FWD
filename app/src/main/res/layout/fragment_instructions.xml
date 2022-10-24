@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- I am using constraint layout here because the views doesn't have the same orientation
+    & to improve the UI performance -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,12 +15,12 @@
             android:layout_width="220dp"
             android:layout_height="220dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
             app:layout_constraintBottom_toTopOf="@+id/tv_welcome_header"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/shop"
             app:layout_constraintHorizontal_bias="0.497"
-            android:layout_marginBottom="24dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/shop" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_welcome_text"
@@ -58,8 +58,6 @@
             app:layout_constraintVertical_bias="0.627" />
 
 
-
-
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_page1"
             android:layout_width="wrap_content"
@@ -76,13 +74,13 @@
             android:layout_height="50dp"
             android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
+            android:paddingEnd="0dp"
             android:text="@string/get_started"
+            android:textAllCaps="false"
+            android:textColor="@color/yellow"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:paddingEnd="0dp"
-            android:textAllCaps="false"
-            android:textColor="@color/yellow"/>
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

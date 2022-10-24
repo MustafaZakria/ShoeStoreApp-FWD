@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -8,39 +7,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- I am using constraint layout here because the views doesn't have the same orientation
+        & to improve the UI performance -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".ui.fragments.LoginFragment"
-            android:paddingRight="40dp"
+            android:layout_gravity="center"
             android:paddingLeft="40dp"
-            android:layout_gravity="center">
-
-<!--            <TextView-->
-<!--                android:id="@+id/appIcon"-->
-<!--                android:layout_width="350dp"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:text="@string/app_name"-->
-<!--                android:textSize="34sp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textAllCaps="true"-->
-<!--                android:fontFamily="@font/roboto"-->
-<!--                android:gravity="center"-->
-<!--                app:layout_constraintLeft_toLeftOf="@id/constraintLayout"-->
-<!--                app:layout_constraintRight_toRightOf="@id/constraintLayout"-->
-<!--                app:layout_constraintBottom_toTopOf="@id/layout_username"/>-->
-
+            android:paddingRight="40dp"
+            tools:context=".ui.fragments.LoginFragment">
 
             <ImageView
                 android:id="@+id/app_icon"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                app:srcCompat="@drawable/profile"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toTopOf="@id/layout_email"
                 app:layout_constraintLeft_toLeftOf="@id/constraint_layout"
                 app:layout_constraintRight_toRightOf="@id/constraint_layout"
-                app:layout_constraintBottom_toTopOf="@id/layout_email"
-                android:contentDescription="@string/app_name">
+                app:srcCompat="@drawable/profile">
 
             </ImageView>
 
@@ -66,8 +52,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/app_icon"
                 app:startIconDrawable="@drawable/ic_email"
-                app:startIconTint="@color/white"
-                >
+                app:startIconTint="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_email"
@@ -75,8 +60,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/email_hint"
                     android:inputType="textEmailAddress"
-                    android:textColorHint="@color/white"
-                    />
+                    android:textColorHint="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -102,8 +86,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layout_email"
                 app:startIconDrawable="@drawable/ic_lock"
-                app:startIconTint="@color/white"
-                >
+                app:startIconTint="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_password"
@@ -111,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/password_hint"
                     android:inputType="textPassword"
-                    android:textColorHint="@color/white"/>
+                    android:textColorHint="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -120,40 +103,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:text="@string/login"
                 android:background="@drawable/shape_button_black"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/yellow"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout_pass"
-                android:textAllCaps="false"
-                android:textSize="18sp"
-                android:textColor="@color/yellow"
-                 />
+                app:layout_constraintTop_toBottomOf="@+id/layout_pass" />
 
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_register"
-                android:background="@drawable/shape_button_white"
-                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/shape_button_white"
                 android:text="@string/register"
+                android:textAllCaps="false"
+                android:textColor="@color/yellow"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_login"
-                android:textSize="18sp"
-                android:textColor="@color/yellow"/>
+                app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_forget_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/forget_password"
                 android:textAlignment="center"
                 android:textSize="14sp"
-                android:layout_marginTop="4dp"
                 app:layout_constraintEnd_toEndOf="@+id/layout_pass"
                 app:layout_constraintTop_toBottomOf="@+id/layout_pass" />
 
@@ -164,11 +146,10 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/remember_me"
                 android:textAlignment="viewStart"
-                app:layout_constraintStart_toStartOf="@+id/layout_pass"
-                app:layout_constraintTop_toBottomOf="@+id/layout_pass"
-                android:translationX="-6dp"
                 android:textColor="@color/white"
-                />
+                android:translationX="-6dp"
+                app:layout_constraintStart_toStartOf="@+id/layout_pass"
+                app:layout_constraintTop_toBottomOf="@+id/layout_pass" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>

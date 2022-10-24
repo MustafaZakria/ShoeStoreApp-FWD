@@ -9,12 +9,16 @@ This project will consist of five screens. You don't have to create a shoe store
 5. Shoe Detail screen for adding a new shoe
 
 ## Screens
-<img src="Screens/screen1.png" title="screen one" style="display: inline; margin: 0 auto; max-width: 100px">
-<img src="Screens/screen2.png" title="screen two" style="display: inline; margin: 0 auto; max-width: 100px">
-<img src="Screens/screen3.png" title="screen three" style="display: inline; margin: 0 auto; max-width: 100px">
-<img src="Screens/screen4.png" title="screen four" style="display: inline; margin: 0 auto; max-width: 100px">
-<img src="Screens/screen5.png" title="screen five" style="display: inline; margin: 0 auto; max-width: 100px">
-<img src="Screens/screen6.png" title="screen six" style="display: inline; margin: 0 auto; max-width: 100px">
+
+<p float="left">
+  <img src="Screens/screen1.png" width="100" />
+  <img src="Screens/screen2.png" width="100" /> 
+  <img src="Screens/screen3.png" width="100" />
+  <img src="Screens/screen4.png" width="100" />                         
+  <img src="Screens/screen5.png" width="100" />
+  <img src="Screens/screen6.png" width="100" />
+                                            
+</p>                                                         
 
 
 ## Getting Started

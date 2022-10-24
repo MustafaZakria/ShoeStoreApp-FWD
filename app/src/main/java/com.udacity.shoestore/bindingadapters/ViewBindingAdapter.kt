@@ -1,8 +1,11 @@
 package com.udacity.shoestore.bindingadapters
 
 import android.net.Uri
+import android.view.View
+import android.widget.AutoCompleteTextView
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
+import androidx.databinding.InverseBindingAdapter
 
 class ViewBindingAdapter {
 
@@ -12,5 +15,6 @@ class ViewBindingAdapter {
         fun ImageView.loadImage(uri: Uri) {
             this.setImageURI(uri)
         }
+
     }
 }

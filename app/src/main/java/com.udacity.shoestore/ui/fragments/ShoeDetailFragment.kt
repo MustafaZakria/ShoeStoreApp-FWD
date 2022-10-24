@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,7 @@ class ShoeDetailFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
 
+        binding.shoe = Shoe()
 
         setSizeDropMenu()
 
@@ -81,17 +83,11 @@ class ShoeDetailFragment : Fragment() {
     }
 
     private fun addShoe() {
-        binding.apply {
-            val image = imageUri
-            val name = etName.text.toString()
-            val company = etCompany.text.toString()
-            val desc = etDesc.text.toString()
-            val size = autoTvSize.text.toString().toDouble()
 
-            val shoe = Shoe(name, size, company, desc, image)
-            viewModel.addShoe(shoe)
+        binding.shoe?.let {
+            it.image = imageUri
+            viewModel.addShoe(it)
         }
     }
-
 
 }

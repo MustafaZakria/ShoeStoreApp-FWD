@@ -4,6 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
     <!-- I am using constraint layout here because the views doesn't have the same orientation
     & to improve the UI performance -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -71,14 +76,16 @@
             app:hintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_shoe">
+            app:layout_constraintTop_toBottomOf="@+id/iv_shoe"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/name"
-                android:inputType="text" />
+                android:inputType="text"
+                android:text="@={shoe.name}"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textview.MaterialTextView
@@ -89,7 +96,8 @@
             android:text="@string/company"
             android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/layout_company"
-            app:layout_constraintStart_toStartOf="@+id/layout_company" />
+            app:layout_constraintStart_toStartOf="@+id/layout_company"
+            />
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -101,14 +109,16 @@
             app:hintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout_name">
+            app:layout_constraintTop_toBottomOf="@+id/layout_name"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_company"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/company"
-                android:inputType="text" />
+                android:inputType="text"
+                android:text="@={shoe.company}"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textview.MaterialTextView
@@ -140,21 +150,10 @@
                 android:hint="@string/description"
                 android:inputType="textMultiLine"
                 android:lines="2"
-                android:textAlignment="viewStart" />
+                android:textAlignment="viewStart"
+                android:text="@={shoe.description}"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--    <Spinner-->
-        <!--        android:id="@+id/spSize"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="35dp"-->
-        <!--        android:entries="@array/sizes"-->
-        <!--        android:paddingTop="8dp"-->
-        <!--        android:paddingBottom="8dp"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintHorizontal_bias="0.5"-->
-        <!--        app:layout_constraintStart_toEndOf="@+id/tv_size"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/layout_desc"-->
-        <!--        style="@style/spinner_style"/>-->
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_size"
@@ -188,9 +187,9 @@
                 android:gravity="center_vertical"
                 android:inputType="none"
                 android:padding="3dp"
-                android:text="@string/size"
                 android:textColor="?android:textColorHint"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:text="@={``+ shoe.size}"/>
         </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
